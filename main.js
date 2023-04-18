@@ -1,6 +1,6 @@
 const lineReader = require('line-reader');
 
-lineReader.eachLine('./prueba.txt', function(line, last) {
+lineReader.eachLine('./input_challenge_lab_2.jsonl.txt', function(line, last) {
   
   let jasonObject = JSON.parse(line);
   //console.log(jasonObject);
