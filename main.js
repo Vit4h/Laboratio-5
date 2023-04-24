@@ -4,7 +4,7 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
   
   let jasonObject = JSON.parse(line);
   //console.log(jasonObject);
-  console.log(jasonObject.input2);
+  console.log(jasonObject.input1);
   
   
   if(last) {
