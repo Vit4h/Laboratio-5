@@ -4,8 +4,8 @@
 tmp/
 *.class
 /node_modules/
-/package-lock.json
-/package.json
+
+
 
 # User-specific files
 *.rsuser
