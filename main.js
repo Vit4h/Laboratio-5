@@ -2,7 +2,7 @@ function lecturaJason(){
   const lineReader = require('line-reader');
 lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
     const jason = JSON.parse(line);
-  console.log(jason.input1);
+  console.log(jason);
     if(last) {
     console.log('Last line printed.');
     const used = process.memoryUsage().heapUsed / 1024 / 1024;
