@@ -1,2 +1,4 @@
-const prueba = require('./prueba');
-console.log(prueba);
+import user from "./prueba.cjs";
+ 
+ console.log(user);
+ 
