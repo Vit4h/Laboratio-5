@@ -78,6 +78,17 @@ function filtroActividadDeComercio(listaOcurrente, comercios){
   return match;
 }
 
+function filtroDePrecio(listaOcurrente, presupuesto){
+  let match = [];
+  for (i in range(listaOcurrente)){
+    if(listaOcurrente[i]["price"] <= presupuesto){
+      match.append(listaOcurrente[i]);
+    }
+  }
+  return match;
+}
+
+
 
 
 
