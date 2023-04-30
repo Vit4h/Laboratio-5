@@ -25,6 +25,25 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
   }
   return salida;
  }
+ function filtroDeTipoDeEdificio(input1, construccion){
+  let Match = [];
+  let finalMatch = [];
+  for(let i = 0; i < input1.lenght; i++)
+  {
+    for(let j = 0; j < input1[i]["Builds"].keys(); j++){
+      if(j == construccion){
+        Match.append(input1[i]["Builds"][j]);
+      }
+
+    }
+  }
+  for (let i = 0;i < finalMatch < i++){
+    for (i in j ){
+      finalMatch.append(j);
+    }
+  }
+  return filtroDeTipoDeEdificio;
+ }
 
 
 
