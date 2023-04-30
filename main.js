@@ -16,7 +16,14 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
     case "Orange":
     salida = ["Red", "Orange"];
     break;
+    case "Yellow":
+    salida = ["Red", "Orange", "Yellow"];
+    break;
+    case "Green":
+    salida = ["Red", "Orange", "Yellow", "Green"]
+    break;
   }
+  return salida;
  }
 
 
