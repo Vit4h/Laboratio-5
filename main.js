@@ -49,7 +49,7 @@ function filtroZonaDeRiesgo (listaOcurrente, riesgo){
   let match = [];
   listaRiesgo =[];
   listaRiesgo = listaDeRiesgos(riesgo);
-  for (i in Range(listaOcurrente) ){
+  for (i in range(listaOcurrente) ){
     if (part === listaOcurrente[i]["zoneDanguerous"]){
       match.append(listaOcurrente[i]);
 
@@ -118,7 +118,10 @@ function filtroMatch(input1, input2){
   }
 }
 
-
+let dat = lecturaJason();
+for (i in range(dat)){
+  filtroMatch(data[i]["input1"], data[i]["input2"])
+}
 
 
 
