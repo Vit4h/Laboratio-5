@@ -48,7 +48,7 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
 function filtroZonaDeRiesgo (listaOcurrente, riesgo){
   let match = [];
   listaRiesgo =[];
-  listaRiesgo = filtroZonaDeRiesgo(riesgo);
+  listaRiesgo = listaDeRiesgos(riesgo);
   for (i in Range(listaOcurrente) ){
     if (part === listaOcurrente[i]["zoneDanguerous"]){
       match.append(listaOcurrente[i]);
@@ -87,6 +87,38 @@ function filtroDePrecio(listaOcurrente, presupuesto){
   }
   return match;
 }
+
+function salida(listaOcurrente){
+  let output = [];
+  for (i in range (listaOcurrente)){
+    output.append(listaOcurrente[i]["id"])
+  }
+  return output;
+}
+
+function filtroMatch(input1, input2){
+  
+  const Construcciones = filtroDeTipoDeEdificio(input1, input2["typeBuilder"])
+  switch(input2["typeBuilder"]){
+    case "Houses":
+      listadoFiltro2 = filtroZonaDeRiesgo(Construcciones,input2["minDanger"]);
+      break;
+    case "Apartments":
+      listadoFiltro2 = filtroPetFriendly(Construcciones, input2["wannaPetFriendly"])
+      break;
+    case "Premises":
+      listadoFiltro2 = filtroActividadDeComercio(Construcciones, input2["commercialActivity"])
+    break;
+
+    const filtroPrecio = filtroDePrecio(listadoFiltro2, input2["budget"])
+
+    filtroDePrecio.sort( ["price"]);
+    let output = salida(filtroPrecio);
+    console.log(output);
+  }
+}
+
+
 
 
 
