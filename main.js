@@ -25,6 +25,7 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
   }
   return salida;
  }
+
  function filtroDeTipoDeEdificio(input1, construccion){
   let Match = [];
   let finalMatch = [];
@@ -37,13 +38,25 @@ lineReader.eachLine('./input_challenge_lab_2.jsonl', function(line, last) {
 
     }
   }
-  for (let i = 0;i < finalMatch < i++){
+  for (let i = 0;i < finalMatch ; i++){
     for (i in j ){
       finalMatch.append(j);
     }
   }
   return filtroDeTipoDeEdificio;
  }
+function filtroZonaDeRiesgo (listaOcurrente, riesgo){
+  let match = [];
+  listaRiesgo =[];
+  listaRiesgo = filtroZonaDeRiesgo(riesgo);
+  for (i in Range(listaOcurrente) ){
+    if (part === listaOcurrente[i]["zoneDanguerous"]){
+      match.append(listaOcurrente[i]);
+
+    }
+  }
+  return match;
+}
 
 
 
