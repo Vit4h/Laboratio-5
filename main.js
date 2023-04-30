@@ -58,6 +58,26 @@ function filtroZonaDeRiesgo (listaOcurrente, riesgo){
   return match;
 }
 
+function filtroPetFriendly(listaOcurrente, decision){
+  let match = [];
+  for (i in range (listaOcurrente)){
+    if (listaOcurrente[i]["isPetFriendly"] === decision){
+      match.append(listaOcurrente[i]);
+    }
+  }
+  return match;
+}
+
+function filtroActividadDeComercio(listaOcurrente, comercios){
+  let match = [];
+  for (i in range(listaOcurrente[i])){
+    if (comercios === listaOcurrente[i]["commercialActivies"]){
+      match.append(listaOcurrente[i]);
+    }
+  }
+  return match;
+}
+
 
 
 
